@@ -1,5 +1,6 @@
 import algorithms.HeapSort;
 import algorithms.InsertionSort;
+import algorithms.QuickSort;
 
 public class AlgorithmsJava {
   public static void main(String[] args) {
@@ -16,16 +17,13 @@ public class AlgorithmsJava {
 
     switch (command) {
       case "insertionSort":
-        printResult(
-            "InsertionSort result:",
-            wrapper.insertionSort(args)
-        );
+        printResult("InsertionSort result:", wrapper.insertionSort(args));
         break;
       case "heapSort":
-        printResult(
-            "heapSort result:",
-            wrapper.heapSort(args)
-        );
+        printResult("heapSort result:", wrapper.heapSort(args));
+        break;
+      case "quickSort":
+        printResult("quickSort result:", wrapper.quickSort(args));
         break;
       default:
     }
@@ -34,6 +32,11 @@ public class AlgorithmsJava {
   @SuppressWarnings("WeakerAccess")
   public <T extends Comparable<T>> T[] insertionSort(T[] array) {
     return InsertionSort.apply(array);
+  }
+
+  @SuppressWarnings("WeakerAccess")
+  public <T extends Comparable<T>> T[] quickSort(T[] array) {
+    return QuickSort.apply(array);
   }
 
   @SuppressWarnings("WeakerAccess")

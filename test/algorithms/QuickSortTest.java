@@ -7,7 +7,7 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HeapSortTest {
+class QuickSortTest {
 
   @Test
   void itShouldSortAListOfStrings() {
@@ -15,7 +15,7 @@ class HeapSortTest {
     String[] ordered = Arrays.copyOf(strings, strings.length);
     Arrays.sort(ordered);
 
-    HeapSort.apply(strings);
+    QuickSort.apply(strings);
 
     assertTrue(Arrays.equals(strings, ordered));
   }
@@ -26,7 +26,7 @@ class HeapSortTest {
     Integer[] ordered = Arrays.copyOf(numbers, numbers.length);
     Arrays.sort(ordered);
 
-    HeapSort.apply(numbers);
+    QuickSort.apply(numbers);
 
     assertTrue(Arrays.equals(numbers, ordered));
   }

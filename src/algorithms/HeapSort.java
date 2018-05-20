@@ -14,8 +14,6 @@ public interface HeapSort {
   static <T extends Comparable<T>> T[] apply(T[] array) {
 
     heapify(array);
-    for (T s : array) { System.out.print(s + " "); }
-    System.out.println();
 
     int lastUnsortedIndex = array.length - 1;
     while (lastUnsortedIndex > 0) {
