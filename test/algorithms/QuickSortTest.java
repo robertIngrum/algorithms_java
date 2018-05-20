@@ -31,5 +31,4 @@ class QuickSortTest {
     assertTrue(Arrays.equals(numbers, ordered));
   }
 
-
 }

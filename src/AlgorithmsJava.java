@@ -25,6 +25,13 @@ public class AlgorithmsJava {
       case "quickSort":
         printResult("quickSort result:", wrapper.quickSort(args));
         break;
+      case "radixSort":
+        Integer[] numbers = new Integer[args.length];
+
+        for (int i = 0; i < args.length; i++) { numbers[i] = Integer.parseInt(args[i]); }
+
+        printResult("radixSort result:", wrapper.radixSort(numbers));
+        break;
       default:
     }
   }
@@ -41,6 +48,11 @@ public class AlgorithmsJava {
 
   @SuppressWarnings("WeakerAccess")
   public <T extends Comparable<T>> T[] heapSort(T[] array) {
+    return HeapSort.apply(array);
+  }
+
+  @SuppressWarnings("WeakerAccess")
+  public Integer[] radixSort(Integer[] array) {
     return HeapSort.apply(array);
   }
 
