@@ -1,7 +1,16 @@
 import algorithms.InsertionSort;
 
 public class AlgorithmsJava {
-  public static void main(String command, String... args) {
+  public static void main(String[] args) {
+    String command  = args[0];
+    String[] params = new String[args.length - 1];
+
+    System.arraycopy(args, 1, params, 0, params.length);
+
+    main(command, params);
+  }
+
+  private static void main(String command, String... args) {
     AlgorithmsJava wrapper = new AlgorithmsJava();
 
     switch (command) {
