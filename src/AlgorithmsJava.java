@@ -1,3 +1,4 @@
+import algorithms.HeapSort;
 import algorithms.InsertionSort;
 
 public class AlgorithmsJava {
@@ -20,6 +21,12 @@ public class AlgorithmsJava {
             wrapper.insertionSort(args)
         );
         break;
+      case "heapSort":
+        printResult(
+            "heapSort result:",
+            wrapper.heapSort(args)
+        );
+        break;
       default:
     }
   }
@@ -27,6 +34,11 @@ public class AlgorithmsJava {
   @SuppressWarnings("WeakerAccess")
   public <T extends Comparable<T>> T[] insertionSort(T[] array) {
     return InsertionSort.apply(array);
+  }
+
+  @SuppressWarnings("WeakerAccess")
+  public <T extends Comparable<T>> T[] heapSort(T[] array) {
+    return HeapSort.apply(array);
   }
 
   private static <T> void printResult(String message, T[] array) {

@@ -7,15 +7,15 @@ import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class InsertionSortTest {
+class HeapSortTest {
 
   @Test
   void itShouldSortAListOfStrings() {
-    String[] strings = { "zzzz", "kmasd", "dfsd", "eesdf", "asde", "efs", "3", "erwaa", "l", "modp", "a", "?" };
+    String[] strings = { "kmasd", "dfsd", "eesdf", "asde", "efs", "zzzz", "rasde", "erwaa", "l", "modp", "a", "hey" };
     String[] ordered = Arrays.copyOf(strings, strings.length);
     Arrays.sort(ordered);
 
-    InsertionSort.apply(strings);
+    HeapSort.apply(strings);
 
     assertTrue(Arrays.equals(strings, ordered));
   }
@@ -30,9 +30,10 @@ class InsertionSortTest {
     Integer[] ordered = Arrays.copyOf(numbers, numbers.length);
     Arrays.sort(ordered);
 
-    InsertionSort.apply(numbers);
+    HeapSort.apply(numbers);
 
     assertTrue(Arrays.equals(numbers, ordered));
   }
+
 
 }
